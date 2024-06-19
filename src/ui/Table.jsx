@@ -58,3 +58,19 @@ const Empty = styled.p`
   text-align: center;
   margin: 2.4rem;
 `;
+
+function Table({ columns, children }) {}
+
+function Header({ children }) {}
+
+function Row({ children }) {}
+
+function Body({ children }) {}
+
+// function Footer({children}) {}
+
+Table.Header = Header;
+Table.Row = Row;
+Table.Body = Body;
+
+export default Table;
