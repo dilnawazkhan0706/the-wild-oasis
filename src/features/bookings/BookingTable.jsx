@@ -3,9 +3,13 @@ import Table from "../../ui/Table";
 import Menus from "../../ui/Menus";
 import Empty from "../../ui/Empty";
 
-function BookingTable() {
-  const bookings = [];
+import { useBookings } from "./useBookings";
+import Spinner from "../../ui/Spinner";
 
+function BookingTable() {
+  const { isLoading, bookings } = useBookings();
+
+  if (isLoading) return <Spinner />;
   if (!bookings.length) return <Empty resource="bookings" />;
   return (
     <Menus>
