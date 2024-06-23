@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 import { login as loginApi } from "../../services/apiAuth";
 
-export async function useLogin() {
+export function useLogin() {
   const navigate = useNavigate();
 
   const { mutate: login, isLoading } = useMutation({
